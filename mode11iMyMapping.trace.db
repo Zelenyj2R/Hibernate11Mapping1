@@ -1362,3 +1362,1147 @@ ORDER BY 1
 2023-07-09 10:36:40 database: disconnected session #3
 2023-07-09 10:36:40 jdbc[3]: 
 /**/conn0.isClosed();
+2023-07-09 10:58:47 database: opening C:/GOIT-prodjekt/Hibernate11Mapping/mode11iMyMapping (build 206)
+2023-07-09 10:58:47 lock: 1 exclusive write lock requesting for SYS 
+2023-07-09 10:58:47 lock: 1 exclusive write lock added for SYS 
+2023-07-09 10:58:47 lock: 1 exclusive write lock requesting for flyway_schema_history 
+2023-07-09 10:58:47 lock: 1 exclusive write lock added for flyway_schema_history 
+2023-07-09 10:58:47 lock: 1 exclusive write lock requesting for CLIENT 
+2023-07-09 10:58:47 lock: 1 exclusive write lock added for CLIENT 
+2023-07-09 10:58:47 lock: 1 exclusive write lock requesting for PLANET 
+2023-07-09 10:58:47 lock: 1 exclusive write lock added for PLANET 
+2023-07-09 10:58:47 lock: 1 exclusive write lock requesting for TICKET 
+2023-07-09 10:58:47 lock: 1 exclusive write lock added for TICKET 
+2023-07-09 10:58:47 lock: 1 exclusive write lock unlock SYS 
+2023-07-09 10:58:47 lock: 1 exclusive write lock unlock flyway_schema_history 
+2023-07-09 10:58:47 lock: 1 exclusive write lock unlock CLIENT 
+2023-07-09 10:58:47 lock: 1 exclusive write lock unlock PLANET 
+2023-07-09 10:58:47 lock: 1 exclusive write lock unlock TICKET 
+2023-07-09 10:58:47 database: opened C:/GOIT-prodjekt/Hibernate11Mapping/mode11iMyMapping
+2023-07-09 10:58:47 database: connecting session #3 to C:/GOIT-prodjekt/Hibernate11Mapping/mode11iMyMapping
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL */SET TRACE_MAX_FILE_SIZE 10;
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2023-07-09 10:58:47 jdbc[3]: 
+/**/Connection conn0 = DriverManager.getConnection("jdbc:h2:./mode11iMyMapping;TRACE_LEVEL_FILE=3;TRACE_MAX_FILE_SIZE=10", "", "");
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/DatabaseMetaData dbMeta0 = conn0.getMetaData();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta0.getDatabaseProductName();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta0.getDatabaseMajorVersion();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta0.getDatabaseMinorVersion();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta0.getDatabaseProductVersion();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/DatabaseMetaData dbMeta1 = conn0.getMetaData();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta1.getURL();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta1.getDriverName();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta1.getDriverVersion();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta1.getDatabaseProductName();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta1.getDatabaseMajorVersion();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta1.getDatabaseMinorVersion();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/DatabaseMetaData dbMeta2 = conn0.getMetaData();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta2.getDatabaseMajorVersion();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta2.getDatabaseMinorVersion();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep0 = conn0.prepareStatement("CALL SCHEMA()");
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSet rs0 = prep0.executeQuery();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL #:1 t:1*/CALL SCHEMA();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs0.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs0.getString(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs0.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep0.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep1 = conn0.prepareStatement("SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'");
+2023-07-09 10:58:47 jdbc[3]: Plan       : calculate cost for plan [SETTINGS:-33:org.h2.table.InformationSchemaTable@34a3d150]
+2023-07-09 10:58:47 jdbc[3]: Plan       :   for table filter SETTINGS:-33:org.h2.table.InformationSchemaTable@34a3d150
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 10 000 index meta
+2023-07-09 10:58:47 jdbc[3]: Plan       :   best plan item cost 9 900 index meta
+2023-07-09 10:58:47 jdbc[3]: Plan       : plan cost 9 901
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSet rs1 = prep1.executeQuery();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL #:1 t:6*/SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE';
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs1.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs1.getString(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs1.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep1.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep2 = conn0.prepareStatement("CALL SCHEMA()");
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSet rs2 = prep2.executeQuery();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL #:1*/CALL SCHEMA();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs2.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs2.getString(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs2.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep2.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep3 = conn0.prepareStatement("CALL SCHEMA()");
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSet rs3 = prep3.executeQuery();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL #:1*/CALL SCHEMA();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs3.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs3.getString(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs3.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep3.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.getCatalog();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL #:1*/CALL DATABASE();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep4 = conn0.prepareStatement("SELECT USER()");
+2023-07-09 10:58:47 jdbc[3]: Plan       : calculate cost for plan [DUAL:0:org.h2.table.DualTable@443118b0]
+2023-07-09 10:58:47 jdbc[3]: Plan       :   for table filter DUAL:0:org.h2.table.DualTable@443118b0
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 1 index dual index
+2023-07-09 10:58:47 jdbc[3]: Plan       :   best plan item cost 1 index dual index
+2023-07-09 10:58:47 jdbc[3]: Plan       : plan cost 2
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSet rs4 = prep4.executeQuery();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL #:1*/SELECT USER();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs4.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs4.getString(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs4.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep4.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep5 = conn0.prepareStatement("SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'info.BUILD_ID'");
+2023-07-09 10:58:47 jdbc[3]: Plan       : calculate cost for plan [SETTINGS:-33:org.h2.table.InformationSchemaTable@34a3d150]
+2023-07-09 10:58:47 jdbc[3]: Plan       :   for table filter SETTINGS:-33:org.h2.table.InformationSchemaTable@34a3d150
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 10 000 index meta
+2023-07-09 10:58:47 jdbc[3]: Plan       :   best plan item cost 9 900 index meta
+2023-07-09 10:58:47 jdbc[3]: Plan       : plan cost 9 901
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSet rs5 = prep5.executeQuery();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL #:1 t:1*/SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'info.BUILD_ID';
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs5.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs5.getInt(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs5.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep5.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta2.getDatabaseMajorVersion();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta2.getDatabaseMinorVersion();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep6 = conn0.prepareStatement("SELECT COUNT(*) FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME=?");
+2023-07-09 10:58:47 jdbc[3]: Plan       : calculate cost for plan [SCHEMATA:-15:org.h2.table.InformationSchemaTable@3fc2959f]
+2023-07-09 10:58:47 jdbc[3]: Plan       :   for table filter SCHEMATA:-15:org.h2.table.InformationSchemaTable@3fc2959f
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 10 000 index meta
+2023-07-09 10:58:47 jdbc[3]: Plan       :   best plan item cost 9 900 index meta
+2023-07-09 10:58:47 jdbc[3]: Plan       : plan cost 9 901
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep6.setString(1, "PUBLIC");
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSet rs6 = prep6.executeQuery();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL l:68 #:1 t:4*/SELECT COUNT(*) FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME=? {1: 'PUBLIC'};
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs6.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs6.getInt(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs6.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep6.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.setAutoCommit(false);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta2.getTables(null, "PUBLIC", "flyway_schema_history", null);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs7.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs7.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep7 = conn0.prepareStatement("SELECT \"installed_rank\",\"version\",\"description\",\"type\",\"script\",\"checksum\",\"installed_on\",\"installed_by\",\"execution_time\",\"success\" FROM \"PUBLIC\".\"flyway_schema_history\" WHERE \"type\" != 'TABLE' AND \"installed_rank\" > ? ORDER BY \"installed_rank\"");
+2023-07-09 10:58:47 jdbc[3]: Plan       : calculate cost for plan [PUBLIC.flyway_schema_history]
+2023-07-09 10:58:47 jdbc[3]: Plan       :   for table filter PUBLIC.flyway_schema_history
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 10 230 index PUBLIC.flyway_schema_history.tableScan
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 5 560 index PUBLIC.PRIMARY_KEY_6
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 22 280 index PUBLIC.flyway_schema_history_s_idx
+2023-07-09 10:58:47 jdbc[3]: Plan       :   best plan item cost 5 504,4 index PUBLIC.PRIMARY_KEY_6
+2023-07-09 10:58:47 jdbc[3]: Plan       : plan cost 5 505,4
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep7.setInt(1, -1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSet rs8 = prep7.executeQuery();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL l:244 #:2*/SELECT \"installed_rank\",\"version\",\"description\",\"type\",\"script\",\"checksum\",\"installed_on\",\"installed_by\",\"execution_time\",\"success\" FROM \"PUBLIC\".\"flyway_schema_history\" WHERE \"type\" != 'TABLE' AND \"installed_rank\" > ? ORDER BY \"installed_rank\" {1: -1};
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSetMetaData rsMeta0 = rs8.getMetaData();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.getCatalog();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnName(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnName(2);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnName(3);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnName(4);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnName(5);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnName(6);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnName(7);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnName(8);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnName(9);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnName(10);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getInt(6);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.wasNull();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getInt(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(2);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(2);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(3);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(4);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(5);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getTimestamp(7);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(8);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getInt(9);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getBoolean(10);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSetMetaData rsMeta1 = rs8.getMetaData();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.getCatalog();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnName(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnName(2);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnName(3);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnName(4);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnName(5);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnName(6);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnName(7);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnName(8);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnName(9);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnName(10);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getInt(6);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.wasNull();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getInt(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(2);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(2);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(3);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(4);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(5);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getTimestamp(7);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getString(8);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getInt(9);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.getBoolean(10);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs8.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep7.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.getCatalog();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.setAutoCommit(false);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep8 = conn0.prepareStatement("SELECT COUNT(*) FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME=?");
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep8.setString(1, "PUBLIC");
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSet rs9 = prep8.executeQuery();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL l:68 #:1*/SELECT COUNT(*) FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME=? {1: 'PUBLIC'};
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs9.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs9.getInt(1);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs9.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep8.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta2.getTables(null, "PUBLIC", "flyway_schema_history", null);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs10.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs10.close();
+2023-07-09 10:58:47 database: connecting session #4 to C:/GOIT-prodjekt/Hibernate11Mapping/mode11iMyMapping
+2023-07-09 10:58:47 jdbc[4]: 
+/*SQL */SET TRACE_MAX_FILE_SIZE 10;
+2023-07-09 10:58:47 jdbc[4]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2023-07-09 10:58:47 jdbc[4]: 
+/**/Connection conn1 = DriverManager.getConnection("jdbc:h2:./mode11iMyMapping;TRACE_LEVEL_FILE=3;TRACE_MAX_FILE_SIZE=10", "", "");
+2023-07-09 10:58:47 jdbc[4]: 
+/**/conn1.setAutoCommit(true);
+2023-07-09 10:58:47 jdbc[4]: 
+/**/conn1.getAutoCommit();
+2023-07-09 10:58:47 jdbc[4]: 
+/**/PreparedStatement prep9 = conn1.prepareStatement("CALL SCHEMA()");
+2023-07-09 10:58:47 jdbc[4]: 
+/**/ResultSet rs11 = prep9.executeQuery();
+2023-07-09 10:58:47 jdbc[4]: 
+/*SQL #:1*/CALL SCHEMA();
+2023-07-09 10:58:47 jdbc[4]: 
+/**/rs11.next();
+2023-07-09 10:58:47 jdbc[4]: 
+/**/rs11.getString(1);
+2023-07-09 10:58:47 jdbc[4]: 
+/**/rs11.close();
+2023-07-09 10:58:47 jdbc[4]: 
+/**/prep9.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.getCatalog();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.setAutoCommit(false);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta2.getTables(null, "PUBLIC", "flyway_schema_history", null);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs12.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs12.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep10 = conn0.prepareStatement("select * from \"PUBLIC\".\"flyway_schema_history\" for update");
+2023-07-09 10:58:47 jdbc[3]: Plan       : calculate cost for plan [PUBLIC.flyway_schema_history]
+2023-07-09 10:58:47 jdbc[3]: Plan       :   for table filter PUBLIC.flyway_schema_history
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 10 230 index PUBLIC.flyway_schema_history.tableScan
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 10 240 index PUBLIC.PRIMARY_KEY_6
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 20 280 index PUBLIC.flyway_schema_history_s_idx
+2023-07-09 10:58:47 jdbc[3]: Plan       :   best plan item cost 10 230 index PUBLIC.flyway_schema_history.tableScan
+2023-07-09 10:58:47 jdbc[3]: Plan       : plan cost 10 231
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep10.execute();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL #:3 t:1*/select * from \"PUBLIC\".\"flyway_schema_history\" for update;
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep10.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta2.getTables(null, "PUBLIC", "flyway_schema_history", null);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs14.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs14.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep11 = conn0.prepareStatement("SELECT \"installed_rank\",\"version\",\"description\",\"type\",\"script\",\"checksum\",\"installed_on\",\"installed_by\",\"execution_time\",\"success\" FROM \"PUBLIC\".\"flyway_schema_history\" WHERE \"type\" != 'TABLE' AND \"installed_rank\" > ? ORDER BY \"installed_rank\"");
+2023-07-09 10:58:47 jdbc[3]: Plan       : calculate cost for plan [PUBLIC.flyway_schema_history]
+2023-07-09 10:58:47 jdbc[3]: Plan       :   for table filter PUBLIC.flyway_schema_history
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 10 230 index PUBLIC.flyway_schema_history.tableScan
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 5 560 index PUBLIC.PRIMARY_KEY_6
+2023-07-09 10:58:47 jdbc[3]: Table      :     potential plan item cost 22 280 index PUBLIC.flyway_schema_history_s_idx
+2023-07-09 10:58:47 jdbc[3]: Plan       :   best plan item cost 5 504,4 index PUBLIC.PRIMARY_KEY_6
+2023-07-09 10:58:47 jdbc[3]: Plan       : plan cost 5 505,4
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep11.setInt(1, 2);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/ResultSet rs15 = prep11.executeQuery();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL l:244*/SELECT \"installed_rank\",\"version\",\"description\",\"type\",\"script\",\"checksum\",\"installed_on\",\"installed_by\",\"execution_time\",\"success\" FROM \"PUBLIC\".\"flyway_schema_history\" WHERE \"type\" != 'TABLE' AND \"installed_rank\" > ? ORDER BY \"installed_rank\" {1: 2};
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs15.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs15.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep11.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/dbMeta2.getTables(null, "PUBLIC", "flyway_schema_history", null);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs16.next();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/rs16.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 10:58:47 jdbc[4]: 
+/**/conn1.getAutoCommit();
+2023-07-09 10:58:47 jdbc[4]: 
+/**/conn1.setAutoCommit(false);
+2023-07-09 10:58:47 jdbc[4]: 
+/**/PreparedStatement prep12 = conn1.prepareStatement("SET SCHEMA \"PUBLIC\"");
+2023-07-09 10:58:47 jdbc[4]: 
+/**/prep12.execute();
+2023-07-09 10:58:47 jdbc[4]: 
+/*SQL */SET SCHEMA \"PUBLIC\";
+2023-07-09 10:58:47 jdbc[4]: 
+/**/prep12.close();
+2023-07-09 10:58:47 jdbc[4]: 
+/**/conn1.commit();
+2023-07-09 10:58:47 jdbc[4]: 
+/*SQL */COMMIT;
+2023-07-09 10:58:47 jdbc[4]: 
+/**/conn1.setAutoCommit(true);
+2023-07-09 10:58:47 jdbc[4]: 
+/**/conn1.commit();
+2023-07-09 10:58:47 jdbc[4]: 
+/*SQL */COMMIT;
+2023-07-09 10:58:47 jdbc[4]: 
+/**/conn1.setAutoCommit(true);
+2023-07-09 10:58:47 jdbc[4]: 
+/**/conn1.isClosed();
+2023-07-09 10:58:47 jdbc[4]: 
+/**/conn1.close();
+2023-07-09 10:58:47 lock: 4 shared read lock unlock SYS 
+2023-07-09 10:58:47 database: disconnecting session #4
+2023-07-09 10:58:47 database: disconnected session #4
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.setAutoCommit(false);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/PreparedStatement prep13 = conn0.prepareStatement("SET SCHEMA \"PUBLIC\"");
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep13.execute();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL */SET SCHEMA \"PUBLIC\";
+2023-07-09 10:58:47 jdbc[3]: 
+/**/prep13.close();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 10:58:47 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.isClosed();
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.close();
+2023-07-09 10:58:47 lock: 3 shared read lock unlock SYS 
+2023-07-09 10:58:47 database: disconnecting session #3
+2023-07-09 10:58:47 database: closing C:/GOIT-prodjekt/Hibernate11Mapping/mode11iMyMapping
+2023-07-09 10:58:47 lock: 2 shared read lock unlock SYS 
+2023-07-09 10:58:47 lock: 1 shared read lock unlock SYS 
+2023-07-09 10:58:47 database: closed
+2023-07-09 10:58:47 database: disconnected session #3
+2023-07-09 10:58:47 jdbc[3]: 
+/**/conn0.isClosed();
+2023-07-09 11:04:17 database: opening C:/GOIT-prodjekt/Hibernate11Mapping/mode11iMyMapping (build 206)
+2023-07-09 11:04:17 lock: 1 exclusive write lock requesting for SYS 
+2023-07-09 11:04:17 lock: 1 exclusive write lock added for SYS 
+2023-07-09 11:04:17 lock: 1 exclusive write lock requesting for flyway_schema_history 
+2023-07-09 11:04:17 lock: 1 exclusive write lock added for flyway_schema_history 
+2023-07-09 11:04:17 lock: 1 exclusive write lock requesting for CLIENT 
+2023-07-09 11:04:17 lock: 1 exclusive write lock added for CLIENT 
+2023-07-09 11:04:17 lock: 1 exclusive write lock requesting for PLANET 
+2023-07-09 11:04:17 lock: 1 exclusive write lock added for PLANET 
+2023-07-09 11:04:17 lock: 1 exclusive write lock requesting for TICKET 
+2023-07-09 11:04:17 lock: 1 exclusive write lock added for TICKET 
+2023-07-09 11:04:18 lock: 1 exclusive write lock unlock SYS 
+2023-07-09 11:04:18 lock: 1 exclusive write lock unlock flyway_schema_history 
+2023-07-09 11:04:18 lock: 1 exclusive write lock unlock CLIENT 
+2023-07-09 11:04:18 lock: 1 exclusive write lock unlock PLANET 
+2023-07-09 11:04:18 lock: 1 exclusive write lock unlock TICKET 
+2023-07-09 11:04:18 database: opened C:/GOIT-prodjekt/Hibernate11Mapping/mode11iMyMapping
+2023-07-09 11:04:18 database: connecting session #3 to C:/GOIT-prodjekt/Hibernate11Mapping/mode11iMyMapping
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL */SET TRACE_MAX_FILE_SIZE 10;
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2023-07-09 11:04:18 jdbc[3]: 
+/**/Connection conn0 = DriverManager.getConnection("jdbc:h2:./mode11iMyMapping;TRACE_LEVEL_FILE=3;TRACE_MAX_FILE_SIZE=10", "", "");
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/DatabaseMetaData dbMeta0 = conn0.getMetaData();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta0.getDatabaseProductName();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta0.getDatabaseMajorVersion();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta0.getDatabaseMinorVersion();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta0.getDatabaseProductVersion();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/DatabaseMetaData dbMeta1 = conn0.getMetaData();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta1.getURL();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta1.getDriverName();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta1.getDriverVersion();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta1.getDatabaseProductName();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta1.getDatabaseMajorVersion();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta1.getDatabaseMinorVersion();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/DatabaseMetaData dbMeta2 = conn0.getMetaData();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta2.getDatabaseMajorVersion();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta2.getDatabaseMinorVersion();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep0 = conn0.prepareStatement("CALL SCHEMA()");
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSet rs0 = prep0.executeQuery();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL #:1 t:1*/CALL SCHEMA();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs0.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs0.getString(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs0.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep0.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep1 = conn0.prepareStatement("SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE'");
+2023-07-09 11:04:18 jdbc[3]: Plan       : calculate cost for plan [SETTINGS:-33:org.h2.table.InformationSchemaTable@34a3d150]
+2023-07-09 11:04:18 jdbc[3]: Plan       :   for table filter SETTINGS:-33:org.h2.table.InformationSchemaTable@34a3d150
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 10 000 index meta
+2023-07-09 11:04:18 jdbc[3]: Plan       :   best plan item cost 9 900 index meta
+2023-07-09 11:04:18 jdbc[3]: Plan       : plan cost 9 901
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSet rs1 = prep1.executeQuery();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL #:1 t:5*/SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'MODE';
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs1.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs1.getString(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs1.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep1.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep2 = conn0.prepareStatement("CALL SCHEMA()");
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSet rs2 = prep2.executeQuery();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL #:1*/CALL SCHEMA();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs2.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs2.getString(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs2.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep2.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep3 = conn0.prepareStatement("CALL SCHEMA()");
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSet rs3 = prep3.executeQuery();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL #:1*/CALL SCHEMA();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs3.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs3.getString(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs3.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep3.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.getCatalog();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL #:1*/CALL DATABASE();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep4 = conn0.prepareStatement("SELECT USER()");
+2023-07-09 11:04:18 jdbc[3]: Plan       : calculate cost for plan [DUAL:0:org.h2.table.DualTable@443118b0]
+2023-07-09 11:04:18 jdbc[3]: Plan       :   for table filter DUAL:0:org.h2.table.DualTable@443118b0
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 1 index dual index
+2023-07-09 11:04:18 jdbc[3]: Plan       :   best plan item cost 1 index dual index
+2023-07-09 11:04:18 jdbc[3]: Plan       : plan cost 2
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSet rs4 = prep4.executeQuery();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL #:1*/SELECT USER();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs4.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs4.getString(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs4.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep4.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep5 = conn0.prepareStatement("SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'info.BUILD_ID'");
+2023-07-09 11:04:18 jdbc[3]: Plan       : calculate cost for plan [SETTINGS:-33:org.h2.table.InformationSchemaTable@34a3d150]
+2023-07-09 11:04:18 jdbc[3]: Plan       :   for table filter SETTINGS:-33:org.h2.table.InformationSchemaTable@34a3d150
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 10 000 index meta
+2023-07-09 11:04:18 jdbc[3]: Plan       :   best plan item cost 9 900 index meta
+2023-07-09 11:04:18 jdbc[3]: Plan       : plan cost 9 901
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSet rs5 = prep5.executeQuery();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL #:1 t:1*/SELECT SETTING_VALUE FROM INFORMATION_SCHEMA.SETTINGS WHERE SETTING_NAME = 'info.BUILD_ID';
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs5.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs5.getInt(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs5.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep5.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta2.getDatabaseMajorVersion();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta2.getDatabaseMinorVersion();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep6 = conn0.prepareStatement("SELECT COUNT(*) FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME=?");
+2023-07-09 11:04:18 jdbc[3]: Plan       : calculate cost for plan [SCHEMATA:-15:org.h2.table.InformationSchemaTable@3fc2959f]
+2023-07-09 11:04:18 jdbc[3]: Plan       :   for table filter SCHEMATA:-15:org.h2.table.InformationSchemaTable@3fc2959f
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 10 000 index meta
+2023-07-09 11:04:18 jdbc[3]: Plan       :   best plan item cost 9 900 index meta
+2023-07-09 11:04:18 jdbc[3]: Plan       : plan cost 9 901
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep6.setString(1, "PUBLIC");
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSet rs6 = prep6.executeQuery();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL l:68 #:1 t:3*/SELECT COUNT(*) FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME=? {1: 'PUBLIC'};
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs6.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs6.getInt(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs6.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep6.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.setAutoCommit(false);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta2.getTables(null, "PUBLIC", "flyway_schema_history", null);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs7.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs7.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep7 = conn0.prepareStatement("SELECT \"installed_rank\",\"version\",\"description\",\"type\",\"script\",\"checksum\",\"installed_on\",\"installed_by\",\"execution_time\",\"success\" FROM \"PUBLIC\".\"flyway_schema_history\" WHERE \"type\" != 'TABLE' AND \"installed_rank\" > ? ORDER BY \"installed_rank\"");
+2023-07-09 11:04:18 jdbc[3]: Plan       : calculate cost for plan [PUBLIC.flyway_schema_history]
+2023-07-09 11:04:18 jdbc[3]: Plan       :   for table filter PUBLIC.flyway_schema_history
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 10 230 index PUBLIC.flyway_schema_history.tableScan
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 5 560 index PUBLIC.PRIMARY_KEY_6
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 22 280 index PUBLIC.flyway_schema_history_s_idx
+2023-07-09 11:04:18 jdbc[3]: Plan       :   best plan item cost 5 504,4 index PUBLIC.PRIMARY_KEY_6
+2023-07-09 11:04:18 jdbc[3]: Plan       : plan cost 5 505,4
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep7.setInt(1, -1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSet rs8 = prep7.executeQuery();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL l:244 #:2*/SELECT \"installed_rank\",\"version\",\"description\",\"type\",\"script\",\"checksum\",\"installed_on\",\"installed_by\",\"execution_time\",\"success\" FROM \"PUBLIC\".\"flyway_schema_history\" WHERE \"type\" != 'TABLE' AND \"installed_rank\" > ? ORDER BY \"installed_rank\" {1: -1};
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSetMetaData rsMeta0 = rs8.getMetaData();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.getCatalog();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnName(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnName(2);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnName(3);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnName(4);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnName(5);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnName(6);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnName(7);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnName(8);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnName(9);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnName(10);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta0.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getInt(6);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.wasNull();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getInt(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(2);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(2);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(3);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(4);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(5);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getTimestamp(7);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(8);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getInt(9);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getBoolean(10);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSetMetaData rsMeta1 = rs8.getMetaData();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.getCatalog();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnName(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnName(2);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnName(3);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnName(4);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnName(5);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnName(6);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnName(7);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnName(8);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnName(9);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnName(10);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rsMeta1.getColumnCount();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getInt(6);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.wasNull();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getInt(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(2);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(2);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(3);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(4);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(5);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getTimestamp(7);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getString(8);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getInt(9);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.getBoolean(10);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs8.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep7.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.getCatalog();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.setAutoCommit(false);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep8 = conn0.prepareStatement("SELECT COUNT(*) FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME=?");
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep8.setString(1, "PUBLIC");
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSet rs9 = prep8.executeQuery();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL l:68 #:1*/SELECT COUNT(*) FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME=? {1: 'PUBLIC'};
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs9.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs9.getInt(1);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs9.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep8.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta2.getTables(null, "PUBLIC", "flyway_schema_history", null);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs10.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs10.close();
+2023-07-09 11:04:18 database: connecting session #4 to C:/GOIT-prodjekt/Hibernate11Mapping/mode11iMyMapping
+2023-07-09 11:04:18 jdbc[4]: 
+/*SQL */SET TRACE_MAX_FILE_SIZE 10;
+2023-07-09 11:04:18 jdbc[4]: 
+/*SQL */SET TRACE_LEVEL_FILE 3;
+2023-07-09 11:04:18 jdbc[4]: 
+/**/Connection conn1 = DriverManager.getConnection("jdbc:h2:./mode11iMyMapping;TRACE_LEVEL_FILE=3;TRACE_MAX_FILE_SIZE=10", "", "");
+2023-07-09 11:04:18 jdbc[4]: 
+/**/conn1.setAutoCommit(true);
+2023-07-09 11:04:18 jdbc[4]: 
+/**/conn1.getAutoCommit();
+2023-07-09 11:04:18 jdbc[4]: 
+/**/PreparedStatement prep9 = conn1.prepareStatement("CALL SCHEMA()");
+2023-07-09 11:04:18 jdbc[4]: 
+/**/ResultSet rs11 = prep9.executeQuery();
+2023-07-09 11:04:18 jdbc[4]: 
+/*SQL #:1*/CALL SCHEMA();
+2023-07-09 11:04:18 jdbc[4]: 
+/**/rs11.next();
+2023-07-09 11:04:18 jdbc[4]: 
+/**/rs11.getString(1);
+2023-07-09 11:04:18 jdbc[4]: 
+/**/rs11.close();
+2023-07-09 11:04:18 jdbc[4]: 
+/**/prep9.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.getCatalog();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.setAutoCommit(false);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta2.getTables(null, "PUBLIC", "flyway_schema_history", null);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs12.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs12.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep10 = conn0.prepareStatement("select * from \"PUBLIC\".\"flyway_schema_history\" for update");
+2023-07-09 11:04:18 jdbc[3]: Plan       : calculate cost for plan [PUBLIC.flyway_schema_history]
+2023-07-09 11:04:18 jdbc[3]: Plan       :   for table filter PUBLIC.flyway_schema_history
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 10 230 index PUBLIC.flyway_schema_history.tableScan
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 10 240 index PUBLIC.PRIMARY_KEY_6
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 20 280 index PUBLIC.flyway_schema_history_s_idx
+2023-07-09 11:04:18 jdbc[3]: Plan       :   best plan item cost 10 230 index PUBLIC.flyway_schema_history.tableScan
+2023-07-09 11:04:18 jdbc[3]: Plan       : plan cost 10 231
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep10.execute();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL #:3 t:1*/select * from \"PUBLIC\".\"flyway_schema_history\" for update;
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep10.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta2.getTables(null, "PUBLIC", "flyway_schema_history", null);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs14.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs14.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep11 = conn0.prepareStatement("SELECT \"installed_rank\",\"version\",\"description\",\"type\",\"script\",\"checksum\",\"installed_on\",\"installed_by\",\"execution_time\",\"success\" FROM \"PUBLIC\".\"flyway_schema_history\" WHERE \"type\" != 'TABLE' AND \"installed_rank\" > ? ORDER BY \"installed_rank\"");
+2023-07-09 11:04:18 jdbc[3]: Plan       : calculate cost for plan [PUBLIC.flyway_schema_history]
+2023-07-09 11:04:18 jdbc[3]: Plan       :   for table filter PUBLIC.flyway_schema_history
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 10 230 index PUBLIC.flyway_schema_history.tableScan
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 5 560 index PUBLIC.PRIMARY_KEY_6
+2023-07-09 11:04:18 jdbc[3]: Table      :     potential plan item cost 22 280 index PUBLIC.flyway_schema_history_s_idx
+2023-07-09 11:04:18 jdbc[3]: Plan       :   best plan item cost 5 504,4 index PUBLIC.PRIMARY_KEY_6
+2023-07-09 11:04:18 jdbc[3]: Plan       : plan cost 5 505,4
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep11.setInt(1, 2);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/ResultSet rs15 = prep11.executeQuery();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL l:244*/SELECT \"installed_rank\",\"version\",\"description\",\"type\",\"script\",\"checksum\",\"installed_on\",\"installed_by\",\"execution_time\",\"success\" FROM \"PUBLIC\".\"flyway_schema_history\" WHERE \"type\" != 'TABLE' AND \"installed_rank\" > ? ORDER BY \"installed_rank\" {1: 2};
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs15.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs15.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep11.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/dbMeta2.getTables(null, "PUBLIC", "flyway_schema_history", null);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs16.next();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/rs16.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 11:04:18 jdbc[4]: 
+/**/conn1.getAutoCommit();
+2023-07-09 11:04:18 jdbc[4]: 
+/**/conn1.setAutoCommit(false);
+2023-07-09 11:04:18 jdbc[4]: 
+/**/PreparedStatement prep12 = conn1.prepareStatement("SET SCHEMA \"PUBLIC\"");
+2023-07-09 11:04:18 jdbc[4]: 
+/**/prep12.execute();
+2023-07-09 11:04:18 jdbc[4]: 
+/*SQL */SET SCHEMA \"PUBLIC\";
+2023-07-09 11:04:18 jdbc[4]: 
+/**/prep12.close();
+2023-07-09 11:04:18 jdbc[4]: 
+/**/conn1.commit();
+2023-07-09 11:04:18 jdbc[4]: 
+/*SQL */COMMIT;
+2023-07-09 11:04:18 jdbc[4]: 
+/**/conn1.setAutoCommit(true);
+2023-07-09 11:04:18 jdbc[4]: 
+/**/conn1.commit();
+2023-07-09 11:04:18 jdbc[4]: 
+/*SQL */COMMIT;
+2023-07-09 11:04:18 jdbc[4]: 
+/**/conn1.setAutoCommit(true);
+2023-07-09 11:04:18 jdbc[4]: 
+/**/conn1.isClosed();
+2023-07-09 11:04:18 jdbc[4]: 
+/**/conn1.close();
+2023-07-09 11:04:18 lock: 4 shared read lock unlock SYS 
+2023-07-09 11:04:18 database: disconnecting session #4
+2023-07-09 11:04:18 database: disconnected session #4
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.getAutoCommit();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.setAutoCommit(false);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/PreparedStatement prep13 = conn0.prepareStatement("SET SCHEMA \"PUBLIC\"");
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep13.execute();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL */SET SCHEMA \"PUBLIC\";
+2023-07-09 11:04:18 jdbc[3]: 
+/**/prep13.close();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.commit();
+2023-07-09 11:04:18 jdbc[3]: 
+/*SQL */COMMIT;
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.setAutoCommit(true);
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.isClosed();
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.close();
+2023-07-09 11:04:18 lock: 3 shared read lock unlock SYS 
+2023-07-09 11:04:18 database: disconnecting session #3
+2023-07-09 11:04:18 database: closing C:/GOIT-prodjekt/Hibernate11Mapping/mode11iMyMapping
+2023-07-09 11:04:18 lock: 2 shared read lock unlock SYS 
+2023-07-09 11:04:18 lock: 1 shared read lock unlock SYS 
+2023-07-09 11:04:18 database: closed
+2023-07-09 11:04:18 database: disconnected session #3
+2023-07-09 11:04:18 jdbc[3]: 
+/**/conn0.isClosed();
