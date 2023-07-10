@@ -18,6 +18,9 @@ import lombok.Data;
 @Entity
 @Builder
 @Table(name = "client")
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(exclude = "tickets")
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +29,7 @@ public class Client {
     @Column(name = "name")
     private String name;
 
-    @OneToMany(mappedBy = "client")
+    @OneToMany(mappedBy = "client", fetch = FetchType.EAGER)
     private List<Ticket> tickets;
 
     public List<Ticket> getTickets() {

@@ -21,10 +21,13 @@ public class Ticket {
     @Column(name = "createdAt")
     private ZonedDateTime createdAt;
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
+    @JoinColumn(name = "clientId")
     private Client client;
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
+    @JoinColumn(name = "fromPlanetId")
     private Planet fromPlanet;
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REFRESH)
+    @JoinColumn(name = "toPlanetId")
     private Planet toPlanet;
 
 }
