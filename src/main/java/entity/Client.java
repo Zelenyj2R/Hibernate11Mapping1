@@ -20,7 +20,7 @@ import lombok.Data;
 @Table(name = "client")
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(exclude = "tickets")
+@ToString(exclude= "tickets")
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

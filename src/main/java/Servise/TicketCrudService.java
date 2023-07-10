@@ -15,7 +15,7 @@ public class TicketCrudService {
 
 
 
-    public final SessionFactory sessionFactory = HibernateUtil.getInstance().getSessionFactory();
+    public final SessionFactory sessionFactory= HibernateUtil.getInstance().getSessionFactory();
 
 
     public Optional<Ticket> get(Long id) {
